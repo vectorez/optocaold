@@ -4,30 +4,7 @@ $('.modal').on('hidden.bs.modal', function (e) {
     }    
 });
 
-var edicion = '';
-if($("#editar").val() == '1'){
-    edicion = '<button class="btn btn-warning btnEditarhistoria" title="Editar Historia" id_historia data-toggle="modal" data-target="#modalEditarHistoria"><i class="fa fa-pencil"></i></button>';
-}
-
-var eliminacion = '';
-if($("#elimina").val() == '1'){
-    eliminacion = '<button class="btn btn-danger btnEliminarHistoria" title="Eliminar Historia" id_historia codigo imagen><i class="fa fa-times"></i></button>';
-}
-
-var notas = '';
-if($("#notas").val() == '1'){
-    notas = '<button class="btn btn-primary btnverHistoria" title="Ver Historia" id_historia data-toggle="modal" data-target="#modalVerHistorias" ><i class="fa fa-eye"></i></button>';
-}
-//
-var tableY = $('#tablaHistorias').DataTable({
-    "ajax": 'ajax/historias.ajax.php?damehistorias=true',
-    "columnDefs": [
-        {
-            "targets": -1,
-            "data": null,
-            "defaultContent": edicion+'&nbsp;'+ eliminacion +'&nbsp;'+ notas +'&nbsp;<button class="btn btn-primary btnImprimirHistoria" title="Imprimir Historia" id_historia><i class="fa fa-print"></i></button>&nbsp;<button class="btn btn-info btnImprimirSoloFormula" title="Imprimir Solo FOrmula" id_historia><i class="fa fa-print"></i></button>'
-        }
-    ],
+$('.tablas').DataTable({
     "language" : {
         "sProcessing":     "Procesando...",
         "sLengthMenu":     "Mostrar _MENU_ registros",
@@ -51,7 +28,10 @@ var tableY = $('#tablaHistorias').DataTable({
             "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
             "sSortDescending": ": Activar para ordenar la columna de manera descendente"
         }
-    } 
+    },
+    "autoWidth": false,
+    "sScrollX": "100%",
+    "scrollX" : true
 });
 
 
