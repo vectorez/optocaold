@@ -32,9 +32,6 @@
                         <i class="fa fa-file-excel-o"></i>
                     </a>
                 </div>
-                
-                <input type="hidden" id="editar" value="<?php echo $_SESSION['edita'];?>">
-                <<!-- input type="hidden" id="elimina" value="<?php echo $_SESSION['elimina'];?>"> -->
             </div>
             <div class="box-body">
                 <table style="width:100%;" id="tablaPacientes" class="table table-bordered table-striped dt-responsive tablas">
