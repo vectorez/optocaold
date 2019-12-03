@@ -50,6 +50,87 @@
                             <th>Acciones</th>
                         </tr>
                     </thead>
+                    <tbody>
+                        <?php
+                            $campos = "pacientes_id_i, CONCAT(pacientes_nombres_v,' ',pacientes_apellidos_v) as nombre,pacientes_tipo_doc_v, pacientes_documento_v, pacientes_telefono_v, TIMESTAMPDIFF(YEAR,pacientes_fecha_nacimiento_d,CURDATE()) as fecha_nacimiento, pacientes_documento_v, pacientes_ocupacion_v";
+                            $tablas = 'op_historias LEFT JOIN op_pacientes ON pacientes_id_i = historias_paciente_id_i LEFT JOIN sys_usuarios ON historias_optometra_v = usuarios_id_i';
+                            $condiciones = '1 = 1';
+                            $historias = ModeloDao::mdlMostrar($campos, $tablas, $condiciones);
+                            foreach ($historias as $key => $value) {
+                                echo '  <tr>
+                                            <td>
+                                                '.$value['pacientes_id_i'].'
+                                            </td>
+                                            <td>
+                                                '.$value['nombre'].'
+                                            </td>';
+                                    switch ($value['pacientes_tipo_doc_v']) {
+                                        case "C.C":
+                                            echo '
+                                                <td>
+                                                    Cédula de ciudadania
+                                                </td>';
+                                        break;
+
+                                        case 'C.E':
+                                            echo '
+                                                <td>
+                                                    Cédula de extranjería
+                                                </td>';
+                                        break;
+
+                                        case 'R.C':
+                                            echo '
+                                                <td>
+                                                    Registro civil
+                                                </td>';
+                                        break;
+
+                                        case 'T.I':
+                                            echo '
+                                                <td>
+                                                    Tarjeta de identidad
+                                                </td>';
+                                        break;
+
+                                        case 'OTRO':
+                                            echo '
+                                                <td>
+                                                    Otro
+                                                </td>';
+                                        break;
+
+                                        default:
+                                            echo '
+                                                <td>
+                                                    No definido
+                                                </td>';
+                                    }
+                                    echo '  <tr>
+                                            <td>
+                                                '.$value['pacientes_documento_v'].'
+                                            </td>
+                                            <td>
+                                                '.$value['pacientes_telefono_v'].'
+                                            </td>
+                                            <td>
+                                                '.$value['pacientes_ocupacion_v'].'
+                                            </td>
+                                            <td>
+                                                '.$value['fecha_nacimiento'].'
+                                            </td>';
+                                    echo '   <td>
+                                                <button class="btn btn-warning btnEditarPaciente" title="Editar Paciente" id_Paciente="'.$value['pacientes_id_i'].'" data-toggle="modal" data-target="#modalEditarPaciente">
+                                                    <i class="fa fa-pencil"></i>
+                                                </button>
+                                                <button class="btn btn-danger btnEliminarPaciente" title="Eliminar Paciente" id_Paciente="'.$value['pacientes_id_i'].'" codigo imagen>
+                                                    <i class="fa fa-times"></i>
+                                                </button>
+                                            </td>
+                                        </tr>';
+                            }
+                        ?>
+                    </tbody>
                     <tfoot>
                         <tr>
                             <th style="width: 10px;">#</th>
