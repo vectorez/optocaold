@@ -36,7 +36,7 @@
 		}
 
 		public function ajaxGetHistorias(){
-			$campos = "historias_id_i, CONCAT(pacientes_nombres_v,' ',pacientes_apellidos_v), pacientes_documento_v, pacientes_telefono_v, TIMESTAMPDIFF(YEAR,pacientes_fecha_nacimiento_d,CURDATE()), DATE_FORMAT(historias_fecha_d, '%Y-%m-%d'), historias_numero_v, usuarios_nombres_v, historias_id_i";
+			$campos = "historias_id_i, CONCAT(pacientes_nombres_v,' ',pacientes_apellidos_v) as nombre, pacientes_documento_v, pacientes_telefono_v, TIMESTAMPDIFF(YEAR,pacientes_fecha_nacimiento_d,CURDATE()) as fecha, DATE_FORMAT(historias_fecha_d, '%Y-%m-%d'), historias_numero_v, usuarios_nombres_v, historias_id_i";
 			$tabla = "op_historias LEFT JOIN op_pacientes ON pacientes_id_i = historias_paciente_id_i";
 			$condicion = "1=1";
 			$respuesta = ModeloDAO::mdlMostrar($campos, $tabla, $condicion);
