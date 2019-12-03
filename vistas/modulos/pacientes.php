@@ -103,8 +103,7 @@
                                                     No definido
                                                 </td>';
                                     }
-                                    echo '  <tr>
-                                            <td>
+                                    echo '<td>
                                                 '.$value['pacientes_documento_v'].'
                                             </td>
                                             <td>
