@@ -516,10 +516,21 @@
 						}else{
 							$activa_fam = 0;
 						}
+						$campos = 'antecedentes_id_i';
 						$tabla = 'op_historias_antecedentes';
-						$valores = "antecedentes_tipo_v = '".$value['tipo']."', antecedentes_categoria_v = '".$value['cat']."', antecedentes_personal_i = ".$activa_per.", antecedentes_familiar_i = ".$activa_fam.", antecedentes_nombre_cat_v = '".$value['nombre_cat']."'";
 						$condiciones = "antecedentes_id_i = ".$value['id_antecedente'];
-						ModeloDao::mdlEditar($tabla, $valores, $condiciones);
+						$resultado = ModeloDao::mdlMostrarUnitario($campos, $tabla, $condiciones);
+						if($resultado){
+							$tabla = 'op_historias_antecedentes';
+							$valores = "antecedentes_tipo_v = '".$value['tipo']."', antecedentes_categoria_v = '".$value['cat']."', antecedentes_personal_i = ".$activa_per.", antecedentes_familiar_i = ".$activa_fam.", antecedentes_nombre_cat_v = '".$value['nombre_cat']."'";
+							$condiciones = "antecedentes_id_i = ".$value['id_antecedente'];
+							ModeloDao::mdlEditar($tabla, $valores, $condiciones);
+						}else{
+							$tabla = 'op_historias_antecedentes';
+							$campos = 'antecedentes_historia_id_i, antecedentes_tipo_v, antecedentes_categoria_v, antecedentes_personal_i, antecedentes_familiar_i, antecedentes_nombre_cat_v';
+							$valores = $historia.",'".$value['tipo']."','".$value['cat']."',".$activa_per.",".$activa_fam.",'".$value['nombre_cat']."'";
+							$resultado = ModeloDao::mdlCrear($tabla, $campos, $valores);
+						}						
 					}
 
 					$AntecedentesOculares = $_POST['EditarAntOculares'];
@@ -530,10 +541,21 @@
 						}else{
 							$activa_per = 0;
 						}
+						$campos = 'antecedentes_id_i';
 						$tabla = 'op_historias_antecedentes';
-						$valores = "antecedentes_tipo_v = '".$value['tipo']."', antecedentes_categoria_v = '".$value['cat']."', antecedentes_personal_i = ".$activa_per.", antecedentes_nombre_cat_v = '".$value['nombre_cat']."'";
 						$condiciones = "antecedentes_id_i = ".$value['id_antecedente'];
-						ModeloDao::mdlEditar($tabla, $valores, $condiciones);
+						$resultado = ModeloDao::mdlMostrarUnitario($tabla, $valores, $condiciones);
+						if($resultado){
+							$tabla = 'op_historias_antecedentes';
+							$valores = "antecedentes_tipo_v = '".$value['tipo']."', antecedentes_categoria_v = '".$value['cat']."', antecedentes_personal_i = ".$activa_per.", antecedentes_nombre_cat_v = '".$value['nombre_cat']."'";
+							$condiciones = "antecedentes_id_i = ".$value['id_antecedente'];
+							ModeloDao::mdlEditar($tabla, $valores, $condiciones);
+						}else{
+							$tabla = 'op_historias_antecedentes';
+							$campos = 'antecedentes_historia_id_i, antecedentes_tipo_v, antecedentes_categoria_v, antecedentes_personal_i, antecedentes_nombre_cat_v';
+							$valores = $historia.",'".$value['tipo']."','".$value['cat']."',".$activa_per.",'".$value['nombre_cat']."'";
+							ModeloDao::mdlCrear($tabla, $campos, $valores);
+						}
 					}
 
 					echo "<script>

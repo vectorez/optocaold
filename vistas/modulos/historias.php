@@ -18,7 +18,7 @@
             <div class="box-header with-border">
                 <h3 class="box-title">
                     
-                </h3>
+                </h3>fa-download
                 <div class="box-tools pull-right">
                     <?php if($_SESSION['adiciona'] == 1){ ?>
                     <button class="btn btn-primary" id="btnNuevohistorico" data-toggle="modal" title="Ingresar Historia" data-target="#modalAgregarHistoria">
@@ -31,6 +31,9 @@
                     <a style="display: none;" class="btn btn-primary" href="" id="imprimirHistoria" title="Exportar datos a Excel">
                         <i class="fa fa-file-excel-o"></i>
                     </a>
+                    <button class="btn btn-primary" id="btnHistoriasMasivas" data-toggle="modal" title="Descargar historias masivamente" data-target="#modalHistoriasMasivas">
+                        <i class="fa fa-download"></i>
+                    </button>
                 </div>
                 
                 <input type="hidden" id="editar" value="<?php echo $_SESSION['edita'];?>">
@@ -1270,7 +1273,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Diagnóstico Principal</label>
+                                        <label>Diagnóstico Primario</label>
                                         <input type="text" placeholder="Diagnóstico Principal" required name="NuevoDiagnosticoPrincipal" id="NuevoDiagnosticoPrincipal" class="form-control input-sm">
                                     </div>
                                 </div>
@@ -2678,7 +2681,39 @@
 </div>
 <!-- /.Modal -->
 
-
+<div id="modalHistoriasMasivas" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <form role="form" method="post" enctype="multipart/form-data" id="formHistoriasMasivas">
+                <div class="modal-header" style="background: #3c8dbc;color: white;">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Descargar historias</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6 col-xs-6">
+                            <div class="form-group">
+                                <label>Fecha Inicio</label>
+                                <input class="form-control" name="DesFechaInicio" required id="DesFechaInicio" value="<?php echo date('Y-m-d');?>" placeholder="YYYY-MM-DD">
+                            </div> 
+                        </div>
+                        <div class="col-md-6 col-xs-6">
+                            <div class="form-group">
+                                <label>Fecha Final</label>
+                                <input class="form-control" name="DesFechaFinal" required id="DesFechaFinal" value="<?php echo date('Y-m-d');?>" placeholder="YYYY-MM-DD">
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
+                    <button type="button" class="btn btn-primary" id="BtnDesHistoriasMasivo">Descargar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 <?php 
     $crearPaciente = new ControladorHistorias();

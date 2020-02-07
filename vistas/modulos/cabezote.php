@@ -15,7 +15,7 @@
       	</span>
       	<!-- logo for regular state and mobile devices -->
       	<span class="logo-lg">
-      		<img src="vistas/img/plantilla/Provisional_421.png" height="45" width="165" />	
+      		<img src="vistas/img/plantilla/logo_login_new.png" height="45" width="165" />	
       	</span>
     </a>
     <!-- BARRA DE NAVEGACION -->

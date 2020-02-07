@@ -50,4 +50,34 @@ $('.tablas').DataTable({
     "scrollX" : true
 });
 
+$("#btnGuardarConfiguracion").click(function () {
+    var nit = $("#ConfNIT").val();
+    var direccion = $("#ConfDireccion").val();
+    var telefono = $("#ConfTelefono").val();
+    var datas = new FormData();
+    datas.append('GuardarConfiguracion', nit);
+    datas.append('direccion', direccion);
+    datas.append('telefono', telefono);
+    $.ajax({
+        url   : 'ajax/dao.ajax.php',
+        method: 'post',
+        data  : datas,
+        cache : false,
+        contentType : false,
+        processData : false,
+        dataType    : 'text',
+        success     : function(data){
+            swal({
+                    title  : 'Configuracion guardada con exito!',
+                    type   : 'success',
+                    configButtonText : "Cerrar",
+                    closeOnConfirm: true
+                }, function(){
+
+                }
+            )
+        }
+    });
+});
+
 	

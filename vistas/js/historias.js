@@ -412,6 +412,18 @@ $("#NuevoFechaNac").datepicker({
     todayHighlight: true
 });
 
+$("#DesFechaInicio").datepicker({
+    language: "es",
+    autoclose: true,
+    todayHighlight: true
+});
+
+$("#DesFechaFinal").datepicker({
+    language: "es",
+    autoclose: true,
+    todayHighlight: true
+});
+
 $("#EditarFechaNac").datepicker({
     language: "es",
     autoclose: true,
@@ -475,5 +487,41 @@ $("#NuevoDocumentoH").change(function(){
         }
 
     })
+});
+
+$("#BtnDesHistoriasMasivo").click(function () {
+    var fecha_inicio = $('#DesFechaInicio').val();
+    var fecha_final = $('#DesFechaFinal').val();
+    var datas = new FormData();
+    datas.append('fecha_inicio', fecha_inicio);
+    datas.append('fecha_final', fecha_final);
+    $.ajax({
+        url   : 'ajax/historias_masivo.ajax.php',
+        method: 'post',
+        data  : datas,
+        cache : false,
+        contentType : false,
+        processData : false,
+        dataType    : 'text',
+        success     : function(data){
+            if(data == 'Nohay'){
+                swal({
+                    title  : 'No hay historias en el rango de fechas seleccionado!',
+                    type   : 'error',
+                    configButtonText : "Cerrar",
+                    closeOnConfirm: true
+                });; 
+            }else{
+                location.href = data;
+            }
+
+        },
+        beforeSend : function(){
+            $.blockUI({ baseZ: 2000, message: 'Generando archivo comprimido, por favor espere...' });
+        },
+        complete : function(){
+            $.unblockUI();
+        }
+    });
 });
 

@@ -20,6 +20,9 @@
                     
                 </h3>
                 <div class="box-tools pull-right">
+                    <button data-toggle="modal" data-target="#modalAgregarMasivo" class="btn btn-success btnAgregarMasivo" title ="Agregar pacientes mediante excel">
+                        <i class="fa fa-save"></i>
+                    </button>
                     <?php if($_SESSION['adiciona'] == 1){ ?>
                     <button class="btn btn-primary" id="btnNuevoPaciente" data-toggle="modal" title="Ingresar Paciente" data-target="#modalAgregarPaciente">
                         <i class="fa fa-plus"></i>
@@ -40,7 +43,7 @@
                             <th style="width: 10px;">#</th>
                             <th>Nombre</th>
                             <th>Tipo Doc.</th>
-                            <th>Documento</th>
+                            <th>Numero de Documento</th>
                             <th style="width: 15%;">Teléfono</th>
                             <th>Ocupación</th>
                             <th>Edad</th>
@@ -50,8 +53,8 @@
                     <tbody>
                         <?php
                             $campos = "pacientes_id_i, CONCAT(pacientes_nombres_v,' ',pacientes_apellidos_v) as nombre,pacientes_tipo_doc_v, pacientes_documento_v, pacientes_telefono_v, TIMESTAMPDIFF(YEAR,pacientes_fecha_nacimiento_d,CURDATE()) as fecha_nacimiento, pacientes_documento_v, pacientes_ocupacion_v";
-                            $tablas = 'op_historias LEFT JOIN op_pacientes ON pacientes_id_i = historias_paciente_id_i LEFT JOIN sys_usuarios ON historias_optometra_v = usuarios_id_i';
-                            $condiciones = '1 = 1';
+                            $tablas = 'op_pacientes LEFT JOIN op_historias ON pacientes_id_i = historias_paciente_id_i LEFT JOIN sys_usuarios ON historias_optometra_v = usuarios_id_i';
+                            $condiciones = 'pacientes_estado_i = 1';
                             $historias = ModeloDao::mdlMostrar($campos, $tablas, $condiciones);
                             foreach ($historias as $key => $value) {
                                 echo '  <tr>
@@ -132,7 +135,7 @@
                             <th style="width: 10px;">#</th>
                             <th>Nombre</th>
                             <th>Tipo Doc.</th>
-                            <th>Documento</th>
+                            <th>Numero Documento</th>
                             <th style="width: 15%;">Teléfono</th>
                             <th>Ocupación</th>
                             <th>Edad</th>
@@ -171,7 +174,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Documento</label>
+                                <label>Numero Documento</label>
                                 <input class="form-control" maxlength="15" name="NuevoDocumento" id="NuevoDocumento"  required="" placeholder="Documento">
                             </div> 
                         </div>
@@ -297,7 +300,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Documento</label>
+                                <label>Numero Documento</label>
                                 <input class="form-control" maxlength="15" name="EditarDocumento"  required id="EditarDocumento" placeholder="Documento">
                             </div> 
                         </div>
@@ -392,6 +395,47 @@
                     $crearUsuario = new ControladorPacientes();
                     $crearUsuario->ctrEditarPacientes();
                 ?>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- /.Modal -->
+<!-- Modal agregar opciones masivo -->
+<div id="modalAgregarMasivo" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <form role="form" method="post" enctype="multipart/form-data" id="formCarguePacientes">
+                <div class="modal-header" style="background: #3c8dbc;color: white;">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Agregar opciones por excel</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 col-xs-12">
+                            <div class="form-group">
+                              <label for="CargueExcel">Archivo excel a cargar</label>
+                              <input type="file" name="CargueExcelPacientes" id="CargueExcelPacientes">
+                              <p class="help-block">Peso maximo del archivo 100 MB</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <label>Observaciones:</label><br>
+                    * Las columnas en el excel deben estar organizadas de la siguiente manera (Tipo documento, Documento, Nombres, Apellidos,Estado Civil,Fecha Nacimiento,Sexo,Ocupacion,Residencia,Direccion,Telefono). 
+                    <br>
+                    * No incluir titulos de columna.
+                    <br>
+                    * Opciones para tipo de documento (C.C, C.E, R.C, T.I, OTRO).
+                    <br>
+                    * Opciones para genero (Femenino y Masculino).
+                    <br>
+                    * Opciones para estado civil (Soltero, Casado, UnionLibre, Separado, Viudo, Otro).
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
+                    <button type="button" class="btn btn-primary" id="BtnCarguePacientes">Cargar</button>
+                </div>
             </form>
         </div>
     </div>

@@ -170,6 +170,12 @@
                         include "modulos/optometras.php";
                         echo "<script>$('#menu_optometra').addClass('active');</script>";
                         break;
+                    
+                    case 'configuracion':
+                        include "modulos/configuracion.php";
+                        echo "<script>$('#menu_configuracion').addClass('active');</script>";
+                        break;
+
 
                     case 'salir':
                         include "modulos/salir.php";

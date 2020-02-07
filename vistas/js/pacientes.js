@@ -35,7 +35,7 @@ $('#tablaPacientes tbody').on("click", ".btnEditarPaciente", function(){
 
 /* Eliminar Empleados */
 $('#tablaPacientes tbody').on("click", ".btnEliminarPaciente", function(){
-    var x = $(this).attr('id_Paciente');
+    var x = $(this).attr('id_paciente');
     swal({
         title: '¿Está seguro de borrar este paciente?',
         text: "¡Si no lo está puede cancelar la acción!",
@@ -80,6 +80,47 @@ $("#NuevoDocumento").change(function(){
     })
 });
 
+$("#BtnCarguePacientes").click(function () {
+    if($('#CargueExcelPacientes').val() != ''){
+        var datos = new FormData($("#formCarguePacientes")[0]);
+        datos.append('CargarPacientes', 'si');
+        $.ajax({
+            url  : 'ajax/pacientes.ajax.php',
+            type : 'post',
+            data : datos,
+            cache: false,
+            contentType:false,
+            processData : false,
+            dataType    : 'text',
+            success: function(data){
+                swal({
+                    title  : 'Cargue exitoso!',
+                    text: data,
+                    type   : 'success',
+                    configButtonText : "Cerrar",
+                    closeOnConfirm: true
+                }, function(result){   
+                    window.location = "pacientes"
+                });
+                $('#modalAgregarMasivo').modal('hide');
+            },
+            beforeSend : function(){
+                $.blockUI({ baseZ: 2000, message: '<h3>Cargando datos, por favor espere...</h3>' });
+            },
+            complete : function(){
+                $.unblockUI();
+            }
+        });
+    }else{
+        swal({
+            title  : 'Error',
+            text: 'Debe seleccionar un archivo',
+            type   : 'error',
+            configButtonText : "Cerrar",
+            closeOnConfirm: true
+        });
+    }
+});
 
 /* Activar Empleados */
 /*$('#tablaPacientes tbody').on("click", ".btnDocumentosEmpleado", function(){
