@@ -154,8 +154,8 @@
 							'auxiliares_cilindro_v' 	=> $_POST['NuevoCilindroRetinosOD'],
 							'auxiliares_eje_v' 			=> $_POST['NuevoEjeRetinosOD'],
 							'auxiliares_add_v' 			=> $_POST['NuevoAddRetinosOD'],
-							'auxiliares_av_v' 			=> '0',
-							'auxiliares_dp_v' 			=> '0',
+							'auxiliares_avvl_v' 		=> $_POST['NuevoAVVLRetinosOD'],
+							'auxiliares_avvp_v' 		=> $_POST['NuevoAVVPRetinosOD'],
 							'auxiliares_tipo_pregunta_v' 	=> 'Retinoscopia',
 							'auxiliares_od_id_v'		=> 'OD'
 						);
@@ -168,8 +168,8 @@
 							'auxiliares_cilindro_v' 	=> $_POST['NuevoCilindroRetinosID'],
 							'auxiliares_eje_v' 			=> $_POST['NuevoEjeRetinosID'],
 							'auxiliares_add_v' 			=> $_POST['NuevoAddRetinosID'],
-							'auxiliares_av_v' 			=> '0',
-							'auxiliares_dp_v' 			=> '0',
+							'auxiliares_avvl_v' 		=> $_POST['NuevoAVVLRetinosID'],
+							'auxiliares_avvp_v' 		=> $_POST['NuevoAVVPRetinosID'],
 							'auxiliares_tipo_pregunta_v' 	=> 'Retinoscopia',
 							'auxiliares_od_id_v'		=> 'ID'
 						);
@@ -213,8 +213,9 @@
 							'auxiliares_cilindro_v' 	=> $_POST['NuevoCilindroFormulaFinalOD'],
 							'auxiliares_eje_v' 			=> $_POST['NuevoEjeFormulaFinalOD'],
 							'auxiliares_add_v' 			=> $_POST['NuevoAddFormulaFinalOD'],
-							'auxiliares_av_v' 			=> $_POST['NuevoAvFormulaFinalOD'],
-							'auxiliares_auv_v' 			=> $_POST['NuevoAUVFormulaFinalOD'],
+							'auxiliares_avvl_v' 		=> $_POST['NuevoAVVLFormulaFinalOD'],
+							'auxiliares_avvp_v' 		=> $_POST['NuevoAVVPFormulaFinalOD'],
+							'auxiliares_altura_foral_v' => $_POST['NuevoAlturaForalFormulaFinalOD'],
 							'auxiliares_dp_v' 			=> $_POST['NuevoDpFormulaFinalOD'],
 							'auxiliares_tipo_pregunta_v' 	=> 'Formula',
 							'auxiliares_od_id_v'		=> 'OD'
@@ -228,8 +229,9 @@
 							'auxiliares_cilindro_v' 	=> $_POST['NuevoCilindroFormulaFinalID'],
 							'auxiliares_eje_v' 			=> $_POST['NuevoEjeFormulaFinalID'],
 							'auxiliares_add_v' 			=> $_POST['NuevoAddFormulaFinalID'],
-							'auxiliares_av_v' 			=> $_POST['NuevoAvFormulaFinalID'],
-							'auxiliares_auv_v' 			=> $_POST['NuevoAUVFormulaFinalID'],
+							'auxiliares_avvl_v' 		=> $_POST['NuevoAVVLFormulaFinalID'],
+							'auxiliares_avvp_v' 		=> $_POST['NuevoAVVPFormulaFinalID'],
+							'auxiliares_altura_foral_v' => $_POST['NuevoAlturaForalFormulaFinalID'],
 							'auxiliares_dp_v' 			=> $_POST['NuevoDpFormulaFinalID'],
 							'auxiliares_tipo_pregunta_v' 	=> 'Formula',
 							'auxiliares_od_id_v'		=> 'ID'
@@ -400,8 +402,8 @@
 						'auxiliares_eje_v' 			=> $_POST['EditarEjeID'],
 						'auxiliares_add_v' 			=> $_POST['EditarAddID'],
 						'auxiliares_id_i' 			=> $_POST['EditarIDId'],
-						'auxiliares_av_v' 			=> '0',
-						'auxiliares_dp_v' 			=> '0',
+						'auxiliares_avvl_v' 		=> $_POST['EditarAVVLRetinosID'],
+						'auxiliares_avvp_v' 		=> $_POST['EditarAVVPRetinosID'],
 						'auxiliares_tipo_pregunta_v' 	=> 'Lensometria',
 						'auxiliares_od_id_v'		=> 'ID'
 					);
@@ -417,8 +419,8 @@
 						'auxiliares_eje_v' 			=> $_POST['EditarEjeRetinosOD'],
 						'auxiliares_add_v' 			=> $_POST['EditarAddRetinosOD'],
 						'auxiliares_id_i' 			=> $_POST['EditarRetinosODId'],
-						'auxiliares_av_v' 			=> '0',
-						'auxiliares_dp_v' 			=> '0',
+						'auxiliares_avvl_v' 		=> $_POST['EditarAVVLRetinosOD'],
+						'auxiliares_avvp_v' 		=> $_POST['EditarAVVPRetinosOD'],
 						'auxiliares_tipo_pregunta_v' 	=> 'Retinoscopia',
 						'auxiliares_od_id_v'		=> 'OD'
 					);
@@ -477,8 +479,9 @@
 						'auxiliares_cilindro_v' 	=> $_POST['EditarCilindroFormulaFinalOD'],
 						'auxiliares_eje_v' 			=> $_POST['EditarEjeFormulaFinalOD'],
 						'auxiliares_add_v' 			=> $_POST['EditarAddFormulaFinalOD'],
-						'auxiliares_av_v' 			=> $_POST['EditarAvFormulaFinalOD'],
-						'auxiliares_auv_v' 			=> $_POST['EditarAUVFormulaFinalOD'],
+						'auxiliares_avvl_v' 		=> $_POST['EditarAVVLFormulaFinalOD'],
+						'auxiliares_avvp_v' 		=> $_POST['EditarAVVPFormulaFinalOD'],
+						'auxiliares_altura_foral_v' => $_POST['EditarAlturaForalFormulaFinalOD'],
 						'auxiliares_dp_v' 			=> $_POST['EditarDpFormulaFinalOD'],
 						'auxiliares_id_i' 			=> $_POST['EditarFormulaFinalODId'],
 						'auxiliares_tipo_pregunta_v' 	=> 'Formula',
@@ -493,8 +496,9 @@
 						'auxiliares_cilindro_v' 	=> $_POST['EditarCilindroFormulaFinalID'],
 						'auxiliares_eje_v' 			=> $_POST['EditarEjeFormulaFinalID'],
 						'auxiliares_add_v' 			=> $_POST['EditarAddFormulaFinalID'],
-						'auxiliares_av_v' 			=> $_POST['EditarAvFormulaFinalID'],
-						'auxiliares_auv_v' 			=> $_POST['EditarAUVFormulaFinalID'],
+						'auxiliares_avvl_v' 		=> $_POST['EditarAVVLFormulaFinalID'],
+						'auxiliares_avvp_v' 		=> $_POST['EditarAVVPFormulaFinalID'],
+						'auxiliares_altura_foral_v' => $_POST['EditarAlturaForalFormulaFinalID'],
 						'auxiliares_dp_v' 			=> $_POST['EditarDpFormulaFinalID'],
 						'auxiliares_id_i' 			=> $_POST['EditarFormulaFinalIDId'],
 						'auxiliares_tipo_pregunta_v' 	=> 'Formula',

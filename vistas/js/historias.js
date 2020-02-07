@@ -192,12 +192,16 @@ $('#tablaHistorias tbody').on("click", ".btnEditarhistoria", function(){
                     $("#EditarCilindroRetinosOD").val(item.auxiliares_cilindro_v);
                     $("#EditarEjeRetinosOD").val(item.auxiliares_eje_v);
                     $("#EditarAddRetinosOD").val(item.auxiliares_add_v);
+                    $("#EditarAVVLFormulaFinalOD").val(item.auxiliares_avvl_v);
+                    $("#EditarAVVPFormulaFinalOD").val(item.auxiliares_avvp_v);
                     $("#EditarRetinosODId").val(item.auxiliares_id_i);
                 }else{
                     $("#EditarEsferaRetinosID").val(item.auxiliares_esfera_v);
                     $("#EditarCilindroRetinosID").val(item.auxiliares_cilindro_v);
                     $("#EditarEjeRetinosID").val(item.auxiliares_eje_v);
                     $("#EditarAddRetinosID").val(item.auxiliares_add_v);
+                    $("#EditarAVVLFormulaFinalID").val(item.auxiliares_avvl_v);
+                    $("#EditarAVVPFormulaFinalID").val(item.auxiliares_avvp_v);
                     $("#EditarRetinosIDId").val(item.auxiliares_id_i);
                 }
             });
@@ -223,18 +227,20 @@ $('#tablaHistorias tbody').on("click", ".btnEditarhistoria", function(){
                     $("#EditarCilindroFormulaFinalOD").val(item.auxiliares_cilindro_v);
                     $("#EditarEjeFormulaFinalOD").val(item.auxiliares_eje_v);
                     $("#EditarAddFormulaFinalOD").val(item.auxiliares_add_v);
-                    $("#EditarAvFormulaFinalOD").val(item.auxiliares_av_v);
+                    $("#EditarAVVLFormulaFinalOD").val(item.auxiliares_avvl_v);
                     $("#EditarDpFormulaFinalOD").val(item.auxiliares_dp_v);
-                    $("#EditarAUVFormulaFinalOD").val(item.auxiliares_auv_v);
+                    $("#EditarAVVPFormulaFinalOD").val(item.auxiliares_avvp_v);
+                    $("#EditarAlturaForalFormulaFinalOD").val(item.auxiliares_altura_foral_v);
                     $("#EditarFormulaFinalODId").val(item.auxiliares_id_i);
                 }else{
                     $("#EditarEsferaFormulaFinalID").val(item.auxiliares_esfera_v);
                     $("#EditarCilindroFormulaFinalID").val(item.auxiliares_cilindro_v);
                     $("#EditarEjeFormulaFinalID").val(item.auxiliares_eje_v);
                     $("#EditarAddFormulaFinalID").val(item.auxiliares_add_v);
-                    $("#EditarAvFormulaFinalID").val(item.auxiliares_av_v);
-                    $("#EditarAUVFormulaFinalID").val(item.auxiliares_auv_v);
+                    $("#EditarAVVLFormulaFinalID").val(item.auxiliares_avvl_v);
+                    $("#EditarAVVPFormulaFinalID").val(item.auxiliares_avvp_v);
                     $("#EditarDpFormulaFinalID").val(item.auxiliares_dp_v);
+                    $("#EditarAlturaForalFormulaFinalID").val(item.auxiliares_altura_foral_v);
                     $("#EditarFormulaFinalIDId").val(item.auxiliares_id_i);
                 }
             });

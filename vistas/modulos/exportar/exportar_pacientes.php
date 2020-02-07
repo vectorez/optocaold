@@ -7,7 +7,7 @@
 				<tr>
 					<th>#</th>
 					<th>Tipo Documento</th>
-					<th>Documento</th>
+					<th>Numero Documento</th>
 					<th>Nombres</th>
 					<th>Apellidos</th>
 					<th>Lugar de residencia</th>

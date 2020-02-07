@@ -909,10 +909,12 @@
                                                 <thead>
                                                     <tr>
                                                         <th></th>
-                                                        <th width="20%">Esfera</th>
-                                                        <th width="20%">Cilindro</th>
-                                                        <th width="20%">Eje</th>
-                                                        <th width="20%">AUV</th>
+                                                        <th width="15%">Esfera</th>
+                                                        <th width="15%">Cilindro</th>
+                                                        <th width="15%">Eje</th>
+                                                        <th width="15%">AVVL</th>
+                                                        <th width="15%">ADD</th>
+                                                        <th width="15%">AVVP</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -935,7 +937,17 @@
                                                         </td>
                                                         <td>
                                                             <div class="form-group">
+                                                                <input type="text" class="form-control input-sm" required name="NuevoAVVLRetinosOD" id="NuevoAVVLRetinosOD">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="form-group">
                                                                 <input type="text" class="form-control input-sm" required name="NuevoAddRetinosOD" id="NuevoAddRetinosOD">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control input-sm" required name="NuevoAVVPRetinosID" id="NuevoAVVPRetinosOD">
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -958,7 +970,17 @@
                                                         </td>
                                                         <td>
                                                             <div class="form-group">
+                                                                <input type="text" class="form-control input-sm" required name="NuevoAVVLRetinosID" id="NuevoAVVLRetinosID">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="form-group">
                                                                 <input type="text" class="form-control input-sm" required name="NuevoAddRetinosID" id="NuevoAddRetinosID">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control input-sm" required name="NuevoAVVPRetinosID" id="NuevoAVVPRetinosID">
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -1066,13 +1088,14 @@
                                         <thead>
                                             <tr>
                                                 <th></th>
-                                                <th width="14%">Esfera</th>
-                                                <th width="14%">Cilindro</th>
-                                                <th width="14%">Eje</th>
-                                                <th width="14%">Add</th>
-                                                <th width="14%">Av</th>
-                                                <th width="14%">AUV</th>
-                                                <th width="14%">Dp</th></th>
+                                                <th width="11%">Esfera</th>
+                                                <th width="11%">Cilindro</th>
+                                                <th width="11%">Eje</th>
+                                                <th width="11%">AVVL</th>
+                                                <th width="11%">ADD</th>
+                                                <th width="11%">AVVP</th>
+                                                <th width="11%">Dp</th></th>
+                                                <th width="11%">Alt. Foral</th></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -1095,22 +1118,27 @@
                                                 </td>
                                                 <td>
                                                     <div class="form-group">
+                                                        <input type="text" class="form-control input-sm" required name="NuevoAVVLFormulaFinalOD" id="NuevoAVVLFormulaFinalOD">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-group">
                                                         <input type="text" class="form-control input-sm" required name="NuevoAddFormulaFinalOD" id="NuevoAddFormulaFinalOD">
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="form-group">
-                                                        <input type="text" class="form-control input-sm" required name="NuevoAvFormulaFinalOD" id="NuevoAvFormulaFinalOD">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-group">
-                                                        <input type="text" class="form-control input-sm" required name="NuevoAUVFormulaFinalOD" id="NuevoAUVFormulaFinalOD">
+                                                        <input type="text" class="form-control input-sm" required name="NuevoAVVPFormulaFinalOD" id="NuevoAVVPFormulaFinalOD">
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="form-group">
                                                         <input type="text" class="form-control input-sm" required name="NuevoDpFormulaFinalOD" id="NuevoDpFormulaFinalOD">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control input-sm" required name="NuevoAlturaForalFormulaFinalOD" id="NuevoAlturaForalFormulaFinalOD">
                                                     </div>
                                                 </td>
                                             </tr>
@@ -1133,22 +1161,27 @@
                                                 </td>
                                                 <td>
                                                     <div class="form-group">
+                                                        <input type="text" class="form-control input-sm" required name="NuevoAVVLFormulaFinalID" id="NuevoAVVLFormulaFinalID">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-group">
                                                         <input type="text" class="form-control input-sm" required name="NuevoAddFormulaFinalID" id="NuevoAddFormulaFinalID">
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="form-group">
-                                                        <input type="text" class="form-control input-sm" required name="NuevoAvFormulaFinalID" id="NuevoAvFormulaFinalID">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-group">
-                                                        <input type="text" class="form-control input-sm" required name="NuevoAUVFormulaFinalID" id="NuevoAUVFormulaFinalID">
+                                                        <input type="text" class="form-control input-sm" required name="NuevoAVVPFormulaFinalID" id="NuevoAVVPFormulaFinalID">
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="form-group">
                                                         <input type="text" class="form-control input-sm" required name="NuevoDpFormulaFinalID" id="NuevoDpFormulaFinalID">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control input-sm" required name="NuevoAlturaForalFormulaFinalID" id="NuevoAlturaForalFormulaFinalID">
                                                     </div>
                                                 </td>
                                             </tr>
@@ -1295,7 +1328,7 @@
                                 </div>
                             </div>
 
-                            <div class="row hidden">
+                            <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Conducta</label>
@@ -1304,7 +1337,7 @@
                                 </div>
                             </div>
 
-                            <div class="row hidden">
+                            <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Remisión y Justificación</label>
@@ -2166,10 +2199,12 @@
                                                 <thead>
                                                     <tr>
                                                         <th></th>
-                                                        <th width="20%">Esfera</th>
-                                                        <th width="20%">Cilindro</th>
-                                                        <th width="20%">Eje</th>
-                                                        <th width="20%">AUV</th>
+                                                        <th width="15%">Esfera</th>
+                                                        <th width="15%">Cilindro</th>
+                                                        <th width="15%">Eje</th>
+                                                        <th width="15%">AVVL</th>
+                                                        <th width="15%">ADD</th>
+                                                        <th width="15%">AVVP</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -2192,7 +2227,17 @@
                                                         </td>
                                                         <td>
                                                             <div class="form-group">
+                                                                <input type="text" class="form-control input-sm" required name="EditarAVVLRetinosOD" id="EditarAVVLRetinosOD">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="form-group">
                                                                 <input type="text" class="form-control input-sm" required name="EditarAddRetinosOD" id="EditarAddRetinosOD">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control input-sm" required name="EditarAVVPRetinosOD" id="EditarAVVPRetinosOD">
                                                             </div>
                                                             <input type="hidden" name="EditarRetinosODId" id="EditarRetinosODId">
                                                         </td>
@@ -2216,7 +2261,17 @@
                                                         </td>
                                                         <td>
                                                             <div class="form-group">
+                                                                <input type="text" class="form-control input-sm" required name="EditarAVVLRetinosID" id="EditarAVVLRetinosID">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="form-group">
                                                                 <input type="text" class="form-control input-sm" required name="EditarAddRetinosID" id="EditarAddRetinosID">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control input-sm" required name="EditarAVVPRetinosID" id="EditarAVVPRetinosID">
                                                             </div>
                                                         </td>
                                                         <input type="hidden" name="EditarRetinosIDId" id="EditarRetinosIDId">
@@ -2324,13 +2379,14 @@
                                         <thead>
                                             <tr>
                                                 <th></th>
-                                                <th width="14%">Esfera</th>
-                                                <th width="14%">Cilindro</th>
-                                                <th width="14%">Eje</th>
-                                                <th width="14%">Add</th>
-                                                <th width="14%">Av</th>
-                                                <th width="14%">AUV</th>
-                                                <th width="14%">Dp</th></th>
+                                                <th width="11%">Esfera</th>
+                                                <th width="11%">Cilindro</th>
+                                                <th width="11%">Eje</th>
+                                                <th width="11%">AVVL</th>
+                                                <th width="11%">ADD</th>
+                                                <th width="11%">AVVP</th>
+                                                <th width="11%">Dp</th></th>
+                                                <th width="11%">Alt. Foral</th></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -2353,22 +2409,27 @@
                                                 </td>
                                                 <td>
                                                     <div class="form-group">
+                                                        <input type="text" class="form-control input-sm" required name="EditarAVVLFormulaFinalOD" id="EditarAVVLFormulaFinalOD">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-group">
                                                         <input type="text" class="form-control input-sm" required name="EditarAddFormulaFinalOD" id="EditarAddFormulaFinalOD">
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="form-group">
-                                                        <input type="text" class="form-control input-sm" required name="EditarAvFormulaFinalOD" id="EditarAvFormulaFinalOD">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-group">
-                                                        <input type="text" class="form-control input-sm" required name="EditarAUVFormulaFinalOD" id="EditarAUVFormulaFinalOD">
+                                                        <input type="text" class="form-control input-sm" required name="EditarAVVPFormulaFinalOD" id="EditarAVVPFormulaFinalOD">
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="form-group">
                                                         <input type="text" class="form-control input-sm" required name="EditarDpFormulaFinalOD" id="EditarDpFormulaFinalOD">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control input-sm" required name="EditarAlturaForalFormulaFinalOD" id="EditarAlturaForalFormulaFinalOD">
                                                     </div>
                                                 </td>
                                                 <input type="hidden" name="EditarFormulaFinalODId" id="EditarFormulaFinalODId">
@@ -2392,22 +2453,27 @@
                                                 </td>
                                                 <td>
                                                     <div class="form-group">
+                                                        <input type="text" class="form-control input-sm" required name="EditarAVVLFormulaFinalID" id="EditarAVVLFormulaFinalID">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-group">
                                                         <input type="text" class="form-control input-sm" required name="EditarAddFormulaFinalID" id="EditarAddFormulaFinalID">
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="form-group">
-                                                        <input type="text" class="form-control input-sm" required name="EditarAvFormulaFinalID" id="EditarAvFormulaFinalID">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-group">
-                                                        <input type="text" class="form-control input-sm" required name="EditarAUVFormulaFinalID" id="EditarAUVFormulaFinalID">
+                                                        <input type="text" class="form-control input-sm" required name="EditarAVVPFormulaFinalID" id="EditarAVVPFormulaFinalID">
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="form-group">
                                                         <input type="text" class="form-control input-sm" required name="EditarDpFormulaFinalID" id="EditarDpFormulaFinalID">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control input-sm" required name="EditarAlturaForalFormulaFinalID" id="EditarAlturaForalFormulaFinalID">
                                                     </div>
                                                 </td>
                                                 <input type="hidden" name="EditarFormulaFinalIDId" id="EditarFormulaFinalIDId">
@@ -2554,7 +2620,7 @@
                                 </div>
                             </div>
 
-                            <div class="row hidden">
+                            <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Conducta</label>
@@ -2563,7 +2629,7 @@
                                 </div>
                             </div>
 
-                            <div class="row hidden">
+                            <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Remisión y Justificación</label>

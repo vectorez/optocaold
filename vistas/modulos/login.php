@@ -45,13 +45,4 @@
     <!-- /.login-box-body -->
 </div>
 <!-- /.login-box -->
-<script>
-function changeImg(imgNumber)   {
-    var myImages = ["images/image0.jpg", "images/image1.jpg", "images/image2.jpg", "images/image3.jpg"]; 
-    var imgShown = document.body.style.backgroundImage;
-    var newImgNumber =Math.floor(Math.random()*myImages.length);
-    document.body.style.backgroundImage = 'url('+myImages[newImgNumber]+')';
-}
-window.onload=changeImg;
-</script>
 
