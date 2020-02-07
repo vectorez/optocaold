@@ -1,7 +1,6 @@
 <div id="back"></div>
 <div class="login-box">
     <div class="login-logo">
-       <span class="texto">&nbsp;</span>
        <img src="vistas/img/plantilla/logo_login_new.png"  style="width: 100%;" />
     </div>
     <!-- /.login-logo -->
