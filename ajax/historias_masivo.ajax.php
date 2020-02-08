@@ -193,9 +193,15 @@
 	                        <td>
 	                            '.$value['auxiliares_eje_v'].'
 	                        </td>
-	                        <td>
-	                            '.$value['auxiliares_add_v'].'
-	                        </td>
+                         	<td>
+                                '.$value['auxiliares_avvl_v'].'
+                            </td>
+                            <td>
+                                '.$value['auxiliares_add_v'].'
+                            </td>
+                            <td>
+                                '.$value['auxiliares_avvp_v'].'
+                            </td>
 	                    </tr>';
 				}else{
 					$html_Retinoscopia .= '<tr>
@@ -209,9 +215,15 @@
 	                        <td>
 	                            '.$value['auxiliares_eje_v'].'
 	                        </td>
-	                        <td>
-	                            '.$value['auxiliares_add_v'].'
-	                        </td>
+                         	<td>
+                                '.$value['auxiliares_avvl_v'].'
+                            </td>
+                            <td>
+                                '.$value['auxiliares_add_v'].'
+                            </td>
+                            <td>
+                                '.$value['auxiliares_avvp_v'].'
+                            </td>
 	                    </tr>';
 				}
 				$i++;
@@ -231,6 +243,12 @@
 	                <td>
 	                    
 	                </td>
+	                <td>
+	                    
+	                </td>
+	                <td>
+	                    
+	                </td>
 	            </tr>';
 	        $html_Retinoscopia .= '<tr>
 	            <td style="text-align: center;">OD</td>
@@ -245,6 +263,12 @@
 	            </td>
 	            <td>
 	                
+	            </td>
+	            <td>
+	                    
+	            </td>
+	            <td>
+	                    
 	            </td>
 	        </tr>';
 		}
@@ -264,17 +288,20 @@
                             <td>
                                 '.$value['auxiliares_eje_v'].'
                             </td>
+				            <td>
+                                '.$value['auxiliares_avvl_v'].'
+                            </td>
                             <td>
                                 '.$value['auxiliares_add_v'].'
                             </td>
                             <td>
-                                '.$value['auxiliares_av_v'].'
-                            </td>
-                            <td>
-                                '.$value['auxiliares_auv_v'].'
+                                '.$value['auxiliares_avvp_v'].'
                             </td>
                             <td>
                                 '.$value['auxiliares_dp_v'].'
+                            </td>
+                            <td>
+                                '.$value['auxiliares_altura_foral_v'].'
                             </td>
                         </tr>';
 				}else{
@@ -290,16 +317,19 @@
                                 '.$value['auxiliares_eje_v'].'
                             </td>
                             <td>
+                                '.$value['auxiliares_avvl_v'].'
+                            </td>
+                            <td>
                                 '.$value['auxiliares_add_v'].'
                             </td>
                             <td>
-                                '.$value['auxiliares_av_v'].'
-                            </td>
-                            <td>
-                                '.$value['auxiliares_auv_v'].'
+                                '.$value['auxiliares_avvp_v'].'
                             </td>
                             <td>
                                 '.$value['auxiliares_dp_v'].'
+                            </td>
+                            <td>
+                                '.$value['auxiliares_altura_foral_v'].'
                             </td>
                         </tr>';
 				}
@@ -316,6 +346,12 @@
                     </td>
                     <td>
                        
+                    </td>
+                    <td>
+                        
+                    </td>
+                    <td>
+                        
                     </td>
                     <td>
                         
@@ -346,6 +382,12 @@
                 </td>
                 <td>
                    
+                </td>
+                <td>
+                        
+                </td>
+                <td>
+                        
                 </td>
             </tr>';
 		}
@@ -667,10 +709,10 @@ html, body {
 		                                <thead>
 		                                    <tr>
 		                                        <th width="8%"></th>
-		                                        <th width="18%">Sin Corrección</th>
-		                                        <th width="18%">Con Corrección</th>
-		                                        <th width="18%">Con Estenopeico</th>
-		                                        <th width="18%">UV</th>
+		                                        <th width="18%">Sin Corrección Vl</th>
+		                                        <th width="18%">VP</th>
+		                                        <th width="18%">Con Corrección Vl</th>
+		                                        <th width="18%">VP</th>
 		                                    </tr>
 		                                </thead>
 		                                <tbody>
@@ -680,13 +722,13 @@ html, body {
 		                                            '.$historia_foreach['historias_sin_correcion_od_v'].'
 		                                        </td>
 		                                        <td>
+		                                            '.$historia_foreach['historias_sin_vp_od_i'].' 
+		                                        </td>
+		                                        <td>
 		                                            '.$historia_foreach['historias_con_correcion_od_v'].' 
 		                                        </td>
 		                                        <td>
-		                                            '.$historia_foreach['historias_con_estenopeico_od_v'].' 
-		                                        </td>
-		                                        <td>
-		                                            '.$historia_foreach['historias_uv_od_v'].' 
+		                                            '.$historia_foreach['historias_con_vp_od_i'].' 
 		                                        </td>
 		                                    </tr>
 		                                     <tr>
@@ -695,13 +737,13 @@ html, body {
 		                                            '.$historia_foreach['historias_sin_correcion_id_v'].' 
 		                                        </td>
 		                                        <td>
-		                                            '.$historia_foreach['historias_sin_correcion_id_v'].' 
+		                                            '.$historia_foreach['historias_sin_vp_id_i'].' 
 		                                        </td>
 		                                        <td>
-		                                            '.$historia_foreach['historias_sin_correcion_id_v'].' 
+		                                            '.$historia_foreach['historias_con_correcion_id_v'].' 
 		                                        </td>
 		                                        <td>
-		                                            '.$historia_foreach['historias_uv_id_v'].' 
+		                                            '.$historia_foreach['historias_con_vp_id_i'].' 
 		                                        </td>
 		                                    </tr>
 		                                </tbody>
@@ -734,10 +776,12 @@ html, body {
 		                                <thead>
 		                                    <tr>
 		                                        <th></th>
-		                                        <th width="20%">Esfera</th>
-		                                        <th width="20%">Cilindro</th>
-		                                        <th width="20%">Eje</th>
-		                                        <th width="20%">AUV</th>
+		                                        <th width="15%">Esfera</th>
+		                                        <th width="15%">Cilindro</th>
+		                                        <th width="15%">Eje</th>
+		                                        <th width="15%">Avvl</th>
+		                                        <th width="15%">Add</th>
+		                                        <th width="15%">Avvp</th>
 		                                    </tr>
 		                                </thead>
 		                                <tbody>
@@ -772,13 +816,14 @@ html, body {
 		                                <thead>
 		                                    <tr>
 		                                        <th></th>
-		                                        <th width="13%">Esfera</th>
-		                                        <th width="13%">Cilindro</th>
-		                                        <th width="13%">Eje</th>
-		                                        <th width="13%">Add</th>
-		                                        <th width="13%">Av</th>
-		                                        <th width="13%">AUV</th>	
-		                                        <th width="13%">DP</th>	
+		                                        <th width="11%">Esfera</th>
+		                                        <th width="11%">Cilindro</th>
+		                                        <th width="11%">Eje</th>
+		                                        <th width="11%">Avvl</th>
+		                                        <th width="11%">Add</th>
+		                                        <th width="11%">Avvp</th>	
+		                                        <th width="11%">DP</th>
+		                                        <th width="11%">Altura Foral</th>	
 		                                    </tr>
 		                                </thead>
 		                                <tbody>
@@ -855,6 +900,16 @@ html, body {
 							<tr  style="text-align: justify;">
 								<th>Diagnóstico Secundario</th>
 								<td>'.$historia_foreach['historias_diagnostico_segundario_v'].'</td>
+							</tr>
+
+							<tr  style="text-align: justify;">
+								<th>Conducta</th>
+								<td>'.$historia_foreach['historias_conducta_v'].'</td>
+							</tr>
+
+							<tr  style="text-align: justify;">
+								<th>Remisión y Justificación</th>
+								<td>'.$historia_foreach['historias_remision_justi_v'].'</td>
 							</tr>
 
 							<tr  style="text-align: justify;">

@@ -793,10 +793,10 @@
                                                 <thead>
                                                     <tr>
                                                         <th></th>
-                                                        <th>Sin Corrección</th>
-                                                        <th>Con Corrección</th>
-                                                        <th>con Estenopeico</th>
-                                                        <th>UV</th>
+                                                        <th>Sin Corrección Vl</th>
+                                                        <th>Vp</th>
+                                                        <th>Con Estenopeico Vl</th>
+                                                        <th>Vp</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -809,17 +809,17 @@
                                                         </td>
                                                         <td>
                                                             <div class="form-group">
+                                                                <input type="text" class="form-control input-sm" required name="NuevoSinVPOD" id="NuevoSinVPOD">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="form-group">
                                                                 <input type="text" class="form-control input-sm" required name="NuevoConCorreccionOD" id="NuevoConCorreccionOD">
                                                             </div>
                                                         </td>
                                                         <td>
                                                             <div class="form-group">
-                                                                <input type="text" class="form-control input-sm" required name="NuevoConEstenopeicoOD" id="NuevoConEstenopeicoOD">
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="form-group">
-                                                                <input type="text" class="form-control input-sm" required name="NuevoConUVOD" id="NuevoConUVOD">
+                                                                <input type="text" class="form-control input-sm" required name="NuevoConVPOD" id="NuevoConVPOD">
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -832,17 +832,17 @@
                                                         </td>
                                                         <td>
                                                             <div class="form-group">
+                                                                <input type="text" class="form-control input-sm" required name="NuevoSinVPID" id="NuevoSinVPID">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="form-group">
                                                                 <input type="text" class="form-control input-sm" required name="NuevoConCorreccionID" id="NuevoConCorreccionID">
                                                             </div>
                                                         </td>
                                                         <td>
                                                             <div class="form-group">
-                                                                <input type="text" class="form-control input-sm" required name="NuevoConEstenopeicoID" id="NuevoConEstenopeicoID">
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="form-group">
-                                                                <input type="text" class="form-control input-sm" required name="NuevoConUVID" id="NuevoConUVID">
+                                                                <input type="text" class="form-control input-sm" required name="NuevoConVPID" id="NuevoConVPID">
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -2084,10 +2084,10 @@
                                                 <thead>
                                                     <tr>
                                                         <th></th>
-                                                        <th>Sin Corrección</th>
-                                                        <th>Con Corrección</th>
-                                                        <th>con Estenopeico</th>
-                                                        <th>UV</th>
+                                                        <th>Sin Corrección Vl</th>
+                                                        <th>VP</th>
+                                                        <th>Con Corrección Vl</th>
+                                                        <th>VP</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -2100,17 +2100,17 @@
                                                         </td>
                                                         <td>
                                                             <div class="form-group">
+                                                                <input type="text" class="form-control input-sm" required name="EditarSinVPOD" id="EditarSinVPOD">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="form-group">
                                                                 <input type="text" class="form-control input-sm" required name="EditarConCorreccionOD" id="EditarConCorreccionOD">
                                                             </div>
                                                         </td>
                                                         <td>
                                                             <div class="form-group">
-                                                                <input type="text" class="form-control input-sm" required name="EditarConEstenopeicoOD" id="EditarConEstenopeicoOD">
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="form-group">
-                                                                <input type="text" class="form-control input-sm" required name="EditarConUVOD" id="EditarConUVOD">
+                                                                <input type="text" class="form-control input-sm" required name="EditarConVPOD" id="EditarConVPOD">
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -2123,17 +2123,17 @@
                                                         </td>
                                                         <td>
                                                             <div class="form-group">
+                                                                <input type="text" class="form-control input-sm" required name="EditarSinVPID" id="EditarSinVPID">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="form-group">
                                                                 <input type="text" class="form-control input-sm" required name="EditarConCorreccionID" id="EditarConCorreccionID">
                                                             </div>
                                                         </td>
                                                         <td>
                                                             <div class="form-group">
-                                                                <input type="text" class="form-control input-sm" required name="EditarConEstenopeicoID" id="EditarConEstenopeicoID">
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="form-group">
-                                                                <input type="text" class="form-control input-sm" required name="EditarConUVID" id="EditarConUVID">
+                                                                <input type="text" class="form-control input-sm" required name="EditarConVPID" id="EditarConVPID">
                                                             </div>
                                                         </td>
                                                     </tr>

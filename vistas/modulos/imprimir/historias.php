@@ -460,10 +460,10 @@
 		                                <thead>
 		                                    <tr>
 		                                        <th width="20%"></th>
-		                                        <th width="20%">Sin Corrección</th>
-		                                        <th width="20%">Con Corrección</th>
-		                                        <th width="20%">Con Estenopeico</th>
-		                                        <th width="20%">UV</th>
+		                                        <th width="20%">Sin Corrección Vl</th>
+		                                        <th width="20%">VP</th>
+		                                        <th width="20%">Con Corrección Vl</th>
+		                                        <th width="20%">VP</th>
 		                                    </tr>
 		                                </thead>
 		                                <tbody>
@@ -473,13 +473,13 @@
 		                                           <?php echo $respuesta['historias_sin_correcion_od_v'];?> 
 		                                        </td>
 		                                        <td>
+		                                            <?php echo $respuesta['historias_sin_vp_od_i'];?> 
+		                                        </td>
+		                                        <td>
 		                                            <?php echo $respuesta['historias_con_correcion_od_v'];?> 
 		                                        </td>
 		                                        <td>
-		                                            <?php echo $respuesta['historias_con_estenopeico_od_v'];?> 
-		                                        </td>
-		                                        <td>
-		                                            <?php echo $respuesta['historias_uv_od_v'];?> 
+		                                            <?php echo $respuesta['historias_con_vp_od_i'];?> 
 		                                        </td>
 		                                    </tr>
 		                                     <tr>
@@ -488,13 +488,13 @@
 		                                            <?php echo $respuesta['historias_sin_correcion_id_v'];?> 
 		                                        </td>
 		                                        <td>
-		                                            <?php echo $respuesta['historias_sin_correcion_id_v'];?> 
+		                                            <?php echo $respuesta['historias_sin_vp_id_i'];?> 
 		                                        </td>
 		                                        <td>
 		                                            <?php echo $respuesta['historias_sin_correcion_id_v'];?> 
 		                                        </td>
 		                                        <td>
-		                                            <?php echo $respuesta['historias_uv_id_v'];?> 
+		                                            <?php echo $respuesta['historias_con_vp_id_i'];?> 
 		                                        </td>
 		                                    </tr>
 		                                </tbody>

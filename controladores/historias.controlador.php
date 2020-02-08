@@ -103,15 +103,15 @@
 						'historias_sin_correcion_id_v'				=> $_POST['NuevoSinCorreccionID'],
 						'historias_con_correcion_od_v'				=> $_POST['NuevoConCorreccionOD'],
 						'historias_con_correcion_id_v'				=> $_POST['NuevoConCorreccionID'],
-						'historias_con_estenopeico_od_v'			=> $_POST['NuevoConEstenopeicoOD'],
-						'historias_con_estenopeico_id_v'			=> $_POST['NuevoConEstenopeicoID'],
 						'historias_biomocrospia_v'					=> $_POST['NuevoBiomocrospia'],
 						'historia_tipo_lente_v'						=> $_POST['NuevoTipoLenteEnUso'],
 						'historia_excavacion_oi_v'					=> $_POST['NuevoExcavacionOI'],
 						'historias_observaciones_v'					=> $_POST['NuevoObservaciones'],
 						'historias_antecedentes_oculares_v'			=> $_POST['NuevoAntecedentesOculares'],
-						'historias_uv_id_v'							=> $_POST['NuevoConUVID'],
-						'historias_uv_od_v'							=> $_POST['NuevoConUVOD']
+						'historias_con_vp_od_i'						=> $_POST['NuevoConVPOD'],
+						'historias_sin_vp_od_i'						=> $_POST['NuevoSinVPOD'],
+						'historias_con_vp_id_i'						=> $_POST['NuevoConVPID'],
+						'historias_sin_vp_id_i'						=> $_POST['NuevoSinVPID']
 					);
 
 					$historia = ModeloHistorias::mdlIngresarHistorias($tabla , $datos);
@@ -362,16 +362,16 @@
 					'historias_sin_correcion_id_v'				=> $_POST['EditarSinCorreccionID'],
 					'historias_con_correcion_od_v'				=> $_POST['EditarConCorreccionOD'],
 					'historias_con_correcion_id_v'				=> $_POST['EditarConCorreccionID'],
-					'historias_con_estenopeico_od_v'			=> $_POST['EditarConEstenopeicoOD'],
-					'historias_con_estenopeico_id_v'			=> $_POST['EditarConEstenopeicoID'],
 					'historias_biomocrospia_v'					=> $_POST['EditarBiomocrospia'],
 					'historia_tipo_lente_v'						=> $_POST['EditarTipoLenteEnUso'],
 					'historias_id_i'							=> $_POST['historias_id_i'],
 					'historia_excavacion_oi_v'					=> $_POST['EditarExcavacionOI'],
 					'historias_observaciones_v'					=> $_POST['EditarObservaciones'],
 					'historias_antecedentes_oculares_v'			=> $_POST['EditarAntecedentesOculares'],
-					'historias_uv_id_v'							=> $_POST['EditarConUVID'],
-					'historias_uv_od_v'							=> $_POST['EditarConUVOD']
+					'historias_con_vp_od_i'						=> $_POST['EditarConVPOD'],
+					'historias_sin_vp_od_i'						=> $_POST['EditarSinVPOD'],
+					'historias_con_vp_id_i'						=> $_POST['EditarConVPID'],
+					'historias_sin_vp_id_i'						=> $_POST['EditarSinVPID']
 				);
 
 				$historia = ModeloHistorias::mdlEditarHistorias($tabla , $datos);

@@ -62,12 +62,12 @@ $('#tablaHistorias tbody').on("click", ".btnEditarhistoria", function(){
             /*Agudesa Visual */
             $("#EditarSinCorreccionOD").val(data.historias_sin_correcion_od_v);
             $("#EditarConCorreccionOD").val(data.historias_con_correcion_od_v);
-            $("#EditarConEstenopeicoOD").val(data.historias_con_estenopeico_od_v);
-            $("#EditarConUVOD").val(data.historias_uv_od_v);
+            $("#EditarConVPOD").val(data.historias_con_vp_od_i);
+            $("#EditarSinVPOD").val(data.historias_sin_vp_od_i);
             $("#EditarSinCorreccionID").val(data.historias_sin_correcion_id_v);
             $("#EditarConCorreccionID").val(data.historias_con_correcion_id_v);
-            $("#EditarConEstenopeicoID").val(data.historias_con_estenopeico_id_v);
-            $("#EditarConUVID").val(data.historias_uv_id_v);
+            $("#EditarConVPID").val(data.historias_con_vp_id_i);
+            $("#EditarSinVPID").val(data.historias_sin_vp_id_i);
 
 
             $("#EditarOftalmoscopia").val(data.historias_oftalmoscopia_v);
