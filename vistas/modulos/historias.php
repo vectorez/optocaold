@@ -52,7 +52,7 @@
                             <th>Fecha</th>
                             <th>Historia #</th>
                             <th>Optómetra</th>
-                            <th>Acciones</th>
+                            <th style="width: 180px;">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
