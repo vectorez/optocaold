@@ -14,7 +14,7 @@ var tableY = $('#tablaHistorias').DataTable({
         {
             "targets": -1,
             "data": null,
-            "defaultContent": edicion+'&nbsp;'+ eliminacion +'&nbsp;<button class="btn btn-primary btnImprimirHistoria" title="Imprimir Historia" id_historia><i class="fa fa-print"></i></button>&nbsp;<button class="btn btn-info btnImprimirSoloFormula" title="Imprimir Solo FOrmula" id_historia><i class="fa fa-print"></i></button>'
+            "defaultContent": '<tr><td>'+edicion+'&nbsp;</td><td>'+ eliminacion +'&nbsp;</td><td><button class="btn btn-primary btnImprimirHistoria" title="Imprimir Historia" id_historia><i class="fa fa-print"></i></button>&nbsp;</td><td><button class="btn btn-info btnImprimirSoloFormula" title="Imprimir Solo FOrmula" id_historia><i class="fa fa-print"></i></button></td></tr>'
         }
     ],
     "language" : {
