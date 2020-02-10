@@ -355,7 +355,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
-                    <a type="button" class="btn btn-success" id="BtnCarguePacientes" href="Modelo_cargar_pacientes_optica.xlsx">Descargar Plantilla</a>
+                    <a type="button" class="btn btn-success" href="Modelo_cargar_pacientes_optica.xlsx">Descargar Plantilla</a>
                     <button type="button" class="btn btn-primary" id="BtnCarguePacientes">Cargar</button>
                 </div>
             </form>
