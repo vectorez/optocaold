@@ -11,10 +11,19 @@
 	{
 
 		public function ajaxGuardarConfiguracion($nit, $direccion, $telefono){
+			$campos = 'configuracion_nit_v';
 			$tabla = 'op_configuracion';
-			$campos = 'configuracion_nit_v = \''.$nit.'\', configuracion_direccion_v = \''.$direccion.'\', configuracion_telefono_v = \''.$telefono.'\'';
-			$condicion = "1=1";
-			$respuesta = ModeloDao::mdlEditar($tabla, $campos, $condicion);
+			$condicion = '1=1';
+			$respuesta = ModeloDao::mdlMostrar($tabla, $campos, $condicion);
+			if(count($respuesta['']) == 0){
+				$campos = 'configuracion_nit_v, configuracion_direccion_v, configuracion_telefono_v';
+				$valores = '\''.$nit.'\',\''.$direccion.'\', \''.$telefono.'\'';
+				$respuesta = ModeloDao::mdlCrear($tabla, $campos, $valores);
+			}else{
+				$campos = 'configuracion_nit_v = \''.$nit.'\', configuracion_direccion_v = \''.$direccion.'\', configuracion_telefono_v = \''.$telefono.'\'';
+				$condicion = "1=1";
+				$respuesta = ModeloDao::mdlEditar($tabla, $campos, $condicion);
+			}
 			echo 'ok';
 		}
 
