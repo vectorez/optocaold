@@ -48,7 +48,7 @@
                             <th style="width: 15%;">Teléfono</th>
                             <th>Ocupación</th>
                             <th>Edad</th>
-                            <th>Acciones</th>
+                            <th style="width: 62px;">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
