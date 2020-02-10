@@ -1,3 +1,54 @@
+var edicion = '';
+if($("#editar").val() == '1'){
+    edicion = '<button class="btn btn-warning btnEditarhistoria" title="Editar Historia" id_historia data-toggle="modal" data-target="#modalEditarHistoria"><i class="fa fa-pencil"></i></button>';
+}
+
+var eliminacion = '';
+if($("#elimina").val() == '1'){
+    eliminacion = '<button class="btn btn-danger btnEliminarHistoria" title="Eliminar Historia" id_historia codigo imagen><i class="fa fa-times"></i></button>';
+}
+//
+var tableY = $('#tablaHistorias').DataTable({
+    "ajax": 'ajax/historias.ajax.php?damehistorias=true',
+    "columnDefs": [
+        {
+            "targets": -1,
+            "data": null,
+            "defaultContent": edicion+'&nbsp;'+ eliminacion +'&nbsp;<button class="btn btn-primary btnImprimirHistoria" title="Imprimir Historia" id_historia><i class="fa fa-print"></i></button>&nbsp;<button class="btn btn-info btnImprimirSoloFormula" title="Imprimir Solo FOrmula" id_historia><i class="fa fa-print"></i></button>'
+        }
+    ],
+    "language" : {
+        "sProcessing":     "Procesando...",
+        "sLengthMenu":     "Mostrar _MENU_ registros",
+        "sZeroRecords":    "No se encontraron resultados",
+        "sEmptyTable":     "Ningún dato disponible en esta tabla",
+        "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_",
+        "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0",
+        "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+        "sInfoPostFix":    "",
+        "sSearch":         "Buscar:",
+        "sUrl":            "",
+        "sInfoThousands":  ",",
+        "sLoadingRecords": "Cargando...",
+        "oPaginate": {
+            "sFirst":    "Primero",
+            "sLast":     "Último",
+            "sNext":     "Siguiente",
+            "sPrevious": "Anterior"
+        },
+        "oAria": {
+            "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+            "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+        }
+    } 
+});
+
+
+$('#tablaHistorias tbody').on( 'click', 'button', function () {
+    var dataY = tableY.row( $(this).parents('tr') ).data();
+    $(this).attr("id_historia", dataY[8]);
+});
+
 $('.modal').on('hidden.bs.modal', function (e) {
     if($('.modal').hasClass('in')) {
         $('body').addClass('modal-open');

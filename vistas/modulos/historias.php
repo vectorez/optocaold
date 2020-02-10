@@ -41,7 +41,7 @@
                 <input type="hidden" id="notas" value="<?php echo $_SESSION['notas'];?>">
             </div>
             <div class="box-body">
-                <table style="width:100%;" id="tablaHistorias" class="table table-bordered table-striped dt-responsive tablas">
+                <table style="width:100%;" id="tablaHistorias" class="table table-bordered table-striped dt-responsive">
                     <thead>
                         <tr>
                             <th style="width: 10px;">#</th>
@@ -56,57 +56,6 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
-                            $campos = "historias_id_i, CONCAT(pacientes_nombres_v,' ',pacientes_apellidos_v) as nombre, pacientes_documento_v, pacientes_telefono_v, TIMESTAMPDIFF(YEAR,pacientes_fecha_nacimiento_d,CURDATE()) as fecha_nacimiento, DATE_FORMAT(historias_fecha_d, '%Y-%m-%d') as fecha, historias_numero_v, usuarios_nombres_v, historias_id_i";
-                            $tablas = 'op_historias LEFT JOIN op_pacientes ON pacientes_id_i = historias_paciente_id_i LEFT JOIN sys_usuarios ON historias_optometra_v = usuarios_id_i';
-                            $condiciones = '1 = 1';
-                            $historias = ModeloDao::mdlMostrar($campos, $tablas, $condiciones);
-                            foreach ($historias as $key => $value) {
-                                echo '  <tr>
-                                            <td>
-                                                '.$value['historias_id_i'].'
-                                            </td>
-                                            <td>
-                                                '.$value['nombre'].'
-                                            </td>
-                                            <td>
-                                                '.$value['pacientes_documento_v'].'
-                                            </td>
-                                            <td>
-                                                '.$value['pacientes_telefono_v'].'
-                                            </td>
-                                            <td>
-                                                '.$value['fecha_nacimiento'].'
-                                            </td>
-                                            <td>
-                                                '.$value['fecha'].'
-                                            </td>
-                                            <td>
-                                                '.$value['historias_numero_v'].'
-                                            </td>
-                                            <td>
-                                                '.$value['usuarios_nombres_v'].'
-                                            </td>';
-                                    echo '   <td>
-                                                <button class="btn btn-warning btnEditarhistoria" title="Editar Historia" id_historia="'.$value['historias_id_i'].'" data-toggle="modal" data-target="#modalEditarHistoria">
-                                                    <i class="fa fa-pencil"></i>
-                                                </button>
-                                                <button class="btn btn-danger btnEliminarHistoria" title="Eliminar Historia" id_historia="'.$value['historias_id_i'].'" codigo imagen>
-                                                    <i class="fa fa-times"></i>
-                                                </button>
-                                                <button class="btn btn-primary btnverHistoria" title="Ver Historia" id_historia="'.$value['historias_id_i'].'" data-toggle="modal" data-target="#modalVerHistorias" >
-                                                    <i class="fa fa-eye"></i>
-                                                </button>
-                                                <button class="btn btn-primary btnImprimirHistoria" title="Imprimir Historia" id_historia="'.$value['historias_id_i'].'">
-                                                    <i class="fa fa-print"></i>
-                                                </button>
-                                                <button class="btn btn-info btnImprimirSoloFormula" title="Imprimir Solo Formula" id_historia="'.$value['historias_id_i'].'">
-                                                    <i class="fa fa-print"></i>
-                                                </button>
-                                            </td>
-                                        </tr>';
-                            }
-                        ?>
                     </tbody>
                     <tfoot>
                         <tr>

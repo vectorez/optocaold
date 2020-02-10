@@ -40,8 +40,28 @@
 			$tabla = "op_historias LEFT JOIN op_pacientes ON pacientes_id_i = historias_paciente_id_i LEFT JOIN sys_usuarios ON usuarios_id_i = historias_optometra_v";
 			$condicion = "1=1";
 			$respuesta = ModeloDAO::mdlMostrar($campos, $tabla, $condicion);
-			$datos = array('data' => $respuesta);
-			echo json_encode($datos);
+			$i = 0;
+			echo '{
+		  	"data" : [';
+			foreach ($respuesta as $key => $value) {
+            	if($i != 0){
+            		echo ",";
+            	}
+				echo '[';
+				echo '"'.$value["id"].'",';
+				echo '"'.$value["nombre"].'",';
+				echo '"'.$value["pacientes_documento_v"].'",';
+				echo '"'.$value["pacientes_telefono_v"].'",';
+				echo '"'.$value["fecha_nacimiento"].'",';
+				echo '"'.$value["fecha"].'",';
+				echo '"'.$value["historias_numero_v"].'",';
+				echo '"'.$value["usuarios_nombres_v"].'",';
+				echo '"'.$value["historias_id_i"].'"';
+				echo ']';
+				$i++;
+			}	
+			echo ']
+			}';
 		}
 
 

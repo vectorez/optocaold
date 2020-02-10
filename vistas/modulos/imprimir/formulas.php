@@ -9,6 +9,11 @@
 	$valor2 = 'Formula';
 	$Formula = ControladorHistorias::ctrMostrarAuxiliaresHistorias($item, $valor, $valor2);
 
+	$campos = "*";
+	$tabla = "op_configuracion";
+	$condicion = "configuracion_id_i=1";
+	$configuracion = ModeloDAO::mdlMostrarUnitario($campos, $tabla, $condicion);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,7 +29,7 @@
 					&nbsp;
 				</td>
 				<td width="30%">
-					<img src="vistas/img/plantilla/Logo_de_aviso.png" style="width: 100%;">
+					<img src="vistas/img/plantilla/logo_login_new.png" style="width: 100%;">
 				</td>
 				<td width="10%">
 					&nbsp;
@@ -33,15 +38,15 @@
 					<table width="100%" border="0" style="text-align: justify;">
 						<tr>
 							<td width="30%">NIT</td>
-							<td>900653374-6</td>
+							<td><?php echo $configuracion['configuracion_nit_v']; ?></td>
 						</tr>
 						<tr>
 							<td>Dirección</td>
-							<td>Calle 98 # 100 - 58 Apartado</td>
+							<td><?php echo $configuracion['configuracion_direccion_v']; ?></td>
 						</tr>
 						<tr>
 							<td>Teléfono</td>
-							<td>8287325</td>
+							<td><?php echo $configuracion['configuracion_telefono_v']; ?></td>
 						</tr>
 						<tr>
 							<td>Fecha Impresion</td>

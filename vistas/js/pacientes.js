@@ -1,3 +1,52 @@
+var edicion = '';
+if($("#editar").val() == '1'){
+    edicion = '<button class="btn btn-warning btnEditarPaciente" title="Editar Paciente" id_Paciente data-toggle="modal" data-target="#modalEditarPaciente"><i class="fa fa-pencil"></i></button>';
+}
+
+var eliminacion = '';
+if($("#elimina").val() == '1'){
+    eliminacion = '<button class="btn btn-danger btnEliminarPaciente" title="Eliminar Paciente" id_Paciente codigo imagen><i class="fa fa-times"></i></button>';
+}
+
+var tableX = $('#tablaPacientes').DataTable({
+    "ajax": 'ajax/pacientes.ajax.php?damepacientes=true',
+    "columnDefs": [
+        {
+            "targets": -1,
+            "data": null,
+            "defaultContent": edicion+'&nbsp;'+ eliminacion 
+        }
+    ],
+    "language" : {
+        "sProcessing":     "Procesando...",
+        "sLengthMenu":     "Mostrar _MENU_ registros",
+        "sZeroRecords":    "No se encontraron resultados",
+        "sEmptyTable":     "Ningún dato disponible en esta tabla",
+        "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_",
+        "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0",
+        "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+        "sInfoPostFix":    "",
+        "sSearch":         "Buscar:",
+        "sUrl":            "",
+        "sInfoThousands":  ",",
+        "sLoadingRecords": "Cargando...",
+        "oPaginate": {
+            "sFirst":    "Primero",
+            "sLast":     "Último",
+            "sNext":     "Siguiente",
+            "sPrevious": "Anterior"
+        },
+        "oAria": {
+            "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+            "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+        }
+    } 
+});
+
+$('#tablaPacientes tbody').on( 'click', 'button', function () {
+    var datax = tableX.row( $(this).parents('tr') ).data();
+    $(this).attr("id_Paciente", datax[7]);
+});
 
 /* Editar Empleados */
 $('#tablaPacientes tbody').on("click", ".btnEditarPaciente", function(){
