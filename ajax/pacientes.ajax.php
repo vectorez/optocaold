@@ -106,7 +106,7 @@ echo ']
 		$highestRow = $sheet->getHighestRow();
 		$count_insert = 0;
 		$tabla = 'op_pacientes';
-		for ($row = 1; $row <= $highestRow; $row++){
+		for ($row = 2; $row <= $highestRow; $row++){
 			//seteamos variables
 			$tipo_doc = "A".$row;
 			$documento= "B".$row;

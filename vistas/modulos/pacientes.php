@@ -347,8 +347,6 @@
                     <label>Observaciones:</label><br>
                     * Las columnas en el excel deben estar organizadas de la siguiente manera (Tipo documento, Documento, Nombres, Apellidos,Estado Civil,Fecha Nacimiento,Sexo,Ocupacion,Residencia,Direccion,Telefono). 
                     <br>
-                    * No incluir titulos de columna.
-                    <br>
                     * Opciones para tipo de documento (C.C, C.E, R.C, T.I, OTRO).
                     <br>
                     * Opciones para genero (Femenino y Masculino).
@@ -357,6 +355,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
+                    <a type="button" class="btn btn-success" id="BtnCarguePacientes" href="Modelo_cargar_pacientes_optica.xlsx">Descargar Plantilla</a>
                     <button type="button" class="btn btn-primary" id="BtnCarguePacientes">Cargar</button>
                 </div>
             </form>
