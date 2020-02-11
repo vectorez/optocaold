@@ -15,7 +15,7 @@
 			$tabla = 'op_configuracion';
 			$condicion = '1=1';
 			$respuesta = ModeloDao::mdlMostrar($tabla, $campos, $condicion);
-			if(count($respuesta['']) == 0){
+			if(count($respuesta) == 0){
 				$campos = 'configuracion_nit_v, configuracion_direccion_v, configuracion_telefono_v';
 				$valores = '\''.$nit.'\',\''.$direccion.'\', \''.$telefono.'\'';
 				$respuesta = ModeloDao::mdlCrear($tabla, $campos, $valores);
