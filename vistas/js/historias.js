@@ -569,7 +569,7 @@ $("#BtnDesHistoriasMasivo").click(function () {
                     closeOnConfirm: true
                 });; 
             }else{
-                location.href = data;
+                //location.href = data;
             }
 
         },
